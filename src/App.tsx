@@ -4,6 +4,8 @@ import LoadingAnimation from './components/LoadingAnimation';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import LandingPage from './components/LandingPage';
+import VRExplorer from './components/VRExplorer';
+import './components/VRExplorer.css';
 import { ArrowRight, Clock, Brain, Radio, Users, ChevronDown } from 'lucide-react';
 
 function App() {
@@ -107,7 +109,11 @@ function App() {
                   >
                     About ChronoSpect
                   </motion.h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  
+                  {/* VR Explorer Integration */}
+                  <VRExplorer />
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                     <motion.div 
                       className="p-6 bg-gray-800 rounded-lg"
                       initial={{ opacity: 0, y: 20 }}
@@ -215,7 +221,7 @@ function App() {
             <footer className="py-8 bg-gray-900 border-t border-gray-800">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center text-gray-400">
-                  <p>© {new Date().getFullYear()} ChronoSpect. All rights reserved.</p>
+                  <p> {new Date().getFullYear()} ChronoSpect. All rights reserved.</p>
                 </div>
               </div>
             </footer>
